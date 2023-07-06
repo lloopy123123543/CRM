@@ -13,11 +13,13 @@ export default function HEADER() {
 <div>
       
 <div className="fixed w-full top-0 left-0 p-4">
-   <button onClick={e => openModal(e)} className="text-white bg-Second hover:bg-Main duration-150 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 " type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
-   Открыть меню
+   <button onClick={e => openModal(e)} className="text-white bg-Second hover:bg-Main duration-150 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2  " type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+   <svg className="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
    </button>
 </div>
-<div id="drawer-navigation" className="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -transform-none -translate-x-full bg-Five "  aria-labelledby="drawer-navigation-label">
+<div id="drawer-navigation" className="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -transform-none -translate-x-full bg-Five border-r-4 border-Main"  aria-labelledby="drawer-navigation-label">
     <h5 id="drawer-navigation-label" className="text-base font-semibold text-Fourth uppercase ">Меню</h5>
     <button onClick={e => openModal(e)} type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" className="text-Second bg-transparent hover:bg-Second duration-150 hover:text-Five rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center" >
         <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
