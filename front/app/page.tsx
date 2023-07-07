@@ -1,5 +1,4 @@
-
-import Link from 'next/link';
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="w-full h-screen bg-Third">
@@ -65,16 +64,15 @@ export default function Home() {
                   </a>
                 </div> */}
                 <div>
-                <Link href={'/admin'}>
-                <button
-                  type="submit"
-                  className="w-full bg-Second text-Five bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                >
-                  Войти
-                </button>
-                </Link>
+                  <Link href={"/admin"}>
+                    <button
+                      type="submit"
+                      className="w-full bg-Second text-Five bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    >
+                      Войти
+                    </button>
+                  </Link>
                 </div>
-
               </form>
             </div>
           </div>
