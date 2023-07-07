@@ -13,7 +13,7 @@ export default function HEADER() {
 
   return (
 <div>
-<div className="fixed w-full top-0 left-0 p-4">
+<div className="fixed top-0 left-0 p-4">
    <button onClick={e => openModal(e)} className="text-white bg-Second hover:bg-Main duration-150 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2  " type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
    <svg className="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" d="M1 1h15M1 7h15M1 13h15"/>
