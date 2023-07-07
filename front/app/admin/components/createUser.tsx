@@ -14,7 +14,12 @@ export default function CreateUser() {
     let vacation_count = React.useRef<HTMLInputElement>(null)
     let upper_user_id = React.useRef<HTMLInputElement>(null)
 
-    
+    const select_division = (e: any) => {
+        divison_id = e.target.value
+    }
+    const select_boss = (e: any) => {
+        upper_user_id = e.target.value
+    }
   return (
     <div className="w-full mx-auto bg-Five drop-shadow-2xl p-5 h-auto">
       <div className="w-full text-center text-2xl text-Main font-bold h-auto">
@@ -93,16 +98,17 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Должность</label>
               <select
-              
+              onChange={e => {select_division(e)}}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               >
-                {DIVISION ? DIVISION.map(div => <option key={div.id}>{div.name}</option>): <div>Loading...</div>}
+                {DIVISION ? DIVISION.map(div => <option value={div.id} key={div.id}>{div.name}</option>): <div>Loading...</div>}
               </select>
             </div>
             <div className="grid  items-center text-xl">
               <label className="">Отпуск</label>
               <input
+              ref = {vacation_count}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
@@ -110,6 +116,7 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Подчинение</label>
               <select
+                     onChange={e => {select_boss(e)}}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               >
