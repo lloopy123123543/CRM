@@ -56,6 +56,51 @@ export default function CreateUser() {
               ></input>
             </div>
           </div>
+          <div className="border p-5 grid grid-cols-1 space-y-5">
+            <h1 className="text-Fourth font-bold text-xl">Авторизация</h1>
+            <div className="grid  items-center text-xl">
+              <label className="">Логин</label>
+              <input
+                className="lg:col-span-3 border p-2 border-Main focus:border-Main"
+                required
+              ></input>
+            </div>
+            <div className="grid  items-center text-xl">
+              <label className="">Пароль</label>
+              <input
+                className="lg:col-span-3 border p-2 border-Main focus:border-Main"
+                required
+              ></input>
+            </div>
+            <div className="grid  items-center text-xl">
+            </div>
+          </div>
+          <div className="border p-5 grid grid-cols-1 space-y-5">
+            <h1 className="text-Fourth font-bold text-xl">Дополнительное</h1>
+            <div className="grid  items-center text-xl">
+              <label className="">Дивизия</label>
+              <select
+                className="lg:col-span-3 border p-2 border-Main focus:border-Main"
+                required
+              ></select>
+            </div>
+            <div className="grid  items-center text-xl">
+              <label className="">Отпуск</label>
+              <input
+                className="lg:col-span-3 border p-2 border-Main focus:border-Main"
+                required
+              ></input>
+            </div>
+            <div className="grid  items-center text-xl">
+              <label className="">Подчинение</label>
+              <select
+                className="lg:col-span-3 border p-2 border-Main focus:border-Main"
+                required
+              >
+
+              </select>
+            </div>
+          </div>
         </div>
 
 
