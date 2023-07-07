@@ -1,6 +1,20 @@
-import React from "react";
+"use client"
+import React, { useRef, useState } from "react";
+import DIVISION from "./divisions";
 
 export default function CreateUser() {
+    let first_name = React.useRef<HTMLInputElement>(null)
+    let second_name = React.useRef<HTMLInputElement>(null)
+    let third_name = React.useRef<HTMLInputElement>(null)
+    let phone_number = React.useRef<HTMLInputElement>(null)
+    let email = React.useRef<HTMLInputElement>(null)
+    let login = React.useRef<HTMLInputElement>(null)
+    let password = React.useRef<HTMLInputElement>(null)
+    let divison_id = React.useRef<HTMLInputElement>(null)
+    let vacation_count = React.useRef<HTMLInputElement>(null)
+    let upper_user_id = React.useRef<HTMLInputElement>(null)
+
+    
   return (
     <div className="w-full mx-auto bg-Five drop-shadow-2xl p-5 h-auto">
       <div className="w-full text-center text-2xl text-Main font-bold h-auto">
@@ -11,8 +25,9 @@ export default function CreateUser() {
           <div className="border p-5 grid grid-cols-1 space-y-5">
             <h1 className="text-Fourth font-bold text-xl">ФИО</h1>
             <div className="grid  items-center text-xl">
-              <label className="">Имя</label>
+              <label  className="">Имя</label>
               <input
+              ref = {first_name}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
@@ -20,6 +35,7 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Фамилия</label>
               <input
+              ref = {second_name}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
@@ -27,6 +43,7 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Отчество</label>
               <input
+                ref = {third_name}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
@@ -37,6 +54,7 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Номер телефона</label>
               <input
+                ref = {phone_number}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
@@ -44,13 +62,7 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Почта</label>
               <input
-                className="lg:col-span-3 border p-2 border-Main focus:border-Main"
-                required
-              ></input>
-            </div>
-            <div className="grid  items-center text-xl">
-              <label className="">Адрес</label>
-              <input
+              ref = {email}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
@@ -61,6 +73,7 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Логин</label>
               <input
+              ref = {login}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
@@ -68,21 +81,24 @@ export default function CreateUser() {
             <div className="grid  items-center text-xl">
               <label className="">Пароль</label>
               <input
+              ref = {password}
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
               ></input>
             </div>
-            <div className="grid  items-center text-xl">
-            </div>
+
           </div>
           <div className="border p-5 grid grid-cols-1 space-y-5">
             <h1 className="text-Fourth font-bold text-xl">Дополнительное</h1>
             <div className="grid  items-center text-xl">
-              <label className="">Дивизия</label>
+              <label className="">Должность</label>
               <select
+              
                 className="lg:col-span-3 border p-2 border-Main focus:border-Main"
                 required
-              ></select>
+              >
+                {DIVISION ? DIVISION.map(div => <option key={div.id}>{div.name}</option>): <div>Loading...</div>}
+              </select>
             </div>
             <div className="grid  items-center text-xl">
               <label className="">Отпуск</label>
