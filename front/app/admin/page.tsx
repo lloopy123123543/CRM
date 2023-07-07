@@ -9,7 +9,7 @@ export default function page() {
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     >
-            <div className="container mx-auto w-full mt-28">
+            <div className="mx-auto w-full mt-28">
                 <CreateUser></CreateUser>
 
     </div>
