@@ -9,7 +9,7 @@ export default function Home() {
             href="#"
             className="flex items-center mb-6 text-3xl font-bold text-Main"
           >
-            Flowbite
+            CRM
           </a>
           <div className="w-full bg-white rounded-lg border border-Main md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
